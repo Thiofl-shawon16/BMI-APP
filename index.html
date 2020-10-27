@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BMI Calculator</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div>
+        <h3>BMI Calculator</h3>
+
+        <input id='weight' type="text" placeholder='Weight in kg'><br><br>
+        <input id="feet" type="text" placeholder="Feet">
+        <input id="inch" type="text" placeholder="inch"><br><br>
+    
+        <button  type="submit">Calculate</button>
+    
+        <p><b>Your BMI</p>
+        <p id="p"><b></p>
+    </div>
+    
+    
+   
+
+    <script>
+       document.querySelector('button').addEventListener('click',function(){
+
+       let weight=document.querySelector('#weight').value;
+
+       let x=document.querySelector('#feet').value;
+
+        let y=document.querySelector('#inch').value;
+
+       let p=document.querySelector('#p');
+
+        let ft=x*.3048
+        let inch=y*.0254
+
+        let meter=ft+inch
+
+        let result=weight/(meter*meter)
+
+        if(result<18.5){
+            p.innerHTML=('Your are underweight')
+            p.style.color='red'
+        }
+         else if (result>18.5 && result<=25){
+            p.innerHTML= ('You are Normal')
+            p.style.color='green'
+         }
+         else if(result>25 && result<29.9){
+            p.innerHTML=  ('You are overweight')
+            p.style.color='red'
+         }
+
+         else{
+            p.innerHTML=('You are obese')
+            p.style.color='red'
+         }
+         
+        document.querySelector('p').innerHTML='<b>Your BMI ='+Math.round(result)
+
+
+       })
+
+      
+ 
+
+          
+
+
+       
+    </script>
+</body>
+</html>

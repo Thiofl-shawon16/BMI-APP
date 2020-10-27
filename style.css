@@ -1,0 +1,48 @@
+div {
+    width: 250px;
+    background: #000000cf;
+    margin: auto;
+    margin-top: 100px;
+    text-align: center;
+    box-shadow: -1px 0pc 0 9px #040101cc;
+}
+h3 {
+    text-align: center;
+    padding: 15px;
+    color: cornflowerblue;
+}
+
+input#weight {
+    width: 200px;
+    border-color: azure;
+    padding: 10px;
+}
+#feet{
+    width: 45px;
+    padding: 6px;
+}
+#inch{
+    width: 45px;
+    padding: 6px;
+}
+#feet,#inch{
+    display: inline-block;
+}
+button {
+    background: orange;
+    color: white;
+   
+    padding: 7px;
+    border-radius: 5px;
+    border: none;
+    transition: all 1s;
+}
+button:hover{
+    background: black;
+    color: cadetblue;
+    
+}
+p{
+    color: cornflowerblue;
+
+}
